@@ -6,9 +6,3 @@ services:
       - 81:80
     deploy:
       replicas: 3
-  movie:
-    image: skhaja18/train
-    ports:
-      - 82:80
-    deploy:
-      replicas: 3

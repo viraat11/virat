@@ -1,14 +1,14 @@
-version: "3"
+version: "3.8"
 services:
-  train:
-    image: paytrain:v1
-    ports:
-      - 8000:80
-    volumes:
-      - trainvol
   movie:
-    image: paymovie:v1
+    image: skhaja18/movie
     ports:
-      - 8001:80
-    volumes:
-      - movievol
+      - 81:80
+    deploy:
+      replicas: 3
+  movie:
+    image: skhaja18/train
+    ports:
+      - 82:80
+    deploy:
+      replicas: 3
